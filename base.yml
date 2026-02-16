@@ -1,0 +1,38 @@
+
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+ 
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+#me own
+  - trigger: ":name"
+    replace: "Jeremy"
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  - trigger: ":email"
+    replace: "jemolife69@gmail.com"
+  - trigger : ":school-email"
+    replace : "jn441364@gmail.com"
+  - trigger : ":ccbc-email"
+    replace : "nw1237826@email.ccbcmd.edu"
+  - trigger : ":ccbc-username"
+    replace : "nw1237826"
+  - trigger : ":ccbc-id"
+    replace : "901237826"
